@@ -1,0 +1,27 @@
+.inputItem {
+  display: flex;
+}
+
+.inputItem input {
+  /* flex: 1; */
+  font-size: 1.2rem;
+  /* outline: none; */
+  border: none;
+  border-bottom: 0.1rem solid #748EAC;
+}
+
+.createButton {
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+
+  font-weight: bold;
+  color: #ffffff;
+  background: #748EAC;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  /* cursor: pointer; */
+}
+
+.createButton:hover {
+  background: #A2B3C8;
+}
