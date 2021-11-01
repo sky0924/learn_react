@@ -4,7 +4,7 @@ import Palette from './components/Palette';
 import TodoItemList from './components/TodoItemList';
 import TodoTemplate from './components/TodoTemplate';
 
-const colors = ['#343a40', '#f03e3e', '#12b886', '#228ae6'];
+const colors = ['#1d3557', '#6d6875', '#6b705c', '#ff6b6b'];
 
 class App extends Component {
 
@@ -17,7 +17,7 @@ class App extends Component {
       { id: 1, text: 'world', checked: true },
       { id: 2, text: '!!', checked: false }
     ],
-    color: '#000000'
+    color: '#343a40'
   }
 
   handleChange = (e) => {
@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   handleCreate = () => {
-    const { input, todos } = this.state;
+    const { input, todos, color } = this.state;
     this.setState({
       // input을 비운다. 🤔? 빈 값이 배열에 추가되는 건 아닐까?
       input: '',
@@ -37,7 +37,7 @@ class App extends Component {
         id: this.id++,
         text: input,
         checked: false,
-        color: '#000000'
+        color
       })
     });
   }
@@ -92,23 +92,23 @@ class App extends Component {
 
     return (
       <TodoTemplate 
-        palette={
-          <Palette colors={ colors } selected={ color } onSelect={ handleSelectColor } />
-        }
-        form={
+        form={(
           <Form 
             value={ input }
             onKeyPress={ handleKeyPress }
             onChange={ handleChange }
             onCreate={ handleCreate }
             color={ color } />
-        } 
-        items={
+        )} 
+        items={(
           <TodoItemList 
             todos={ todos }
             onToggle={ handleToggle }
             onRemove={ handleRemove } />
-        } />
+        )}
+        palette={(
+          <Palette colors={ colors } selected={ color } onSelect={ handleSelectColor } />
+        )} />
     );
   }
 

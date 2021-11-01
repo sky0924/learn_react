@@ -4,8 +4,8 @@
 }
 
 .color {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   opacity: 0.5;
   transition: all 0.2s;
   cursor: pointer;
@@ -20,5 +20,18 @@
 }
 
 .color + .color {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
+
+/* .back {
+  display: none;
+}
+
+.back img {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #2e5583;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+} */

@@ -17,11 +17,6 @@
   color: white;
 }
 
-.palette-wrapper {
-  padding: 1rem;
-  background: #f2f3f5;
-}
-
 .form-wrapper {
   padding: 1rem;
   border-bottom: 1px solid #2e5583;
@@ -29,4 +24,9 @@
 
 .todos-wrapper {
   min-height: 5rem;
+}
+
+.palette-wrapper {
+  padding: 2rem;
+  background: #f2f3f5;
 }

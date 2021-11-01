@@ -1,14 +1,14 @@
 import React from 'react';
 import './TodoTemplate.css';
 
-const TodoTemplate = ({ colors, form, items }) => {
+const TodoTemplate = ({ form, items, palette }) => {
   return (
     <main className="todo-template">
       <div className="title">
         오늘 할 일
       </div>
       <section className="palette-wrapper">
-        { colors }
+        { palette }
       </section>
       <section className="form-wrapper">
         { form }
