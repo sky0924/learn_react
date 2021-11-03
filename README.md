@@ -18,7 +18,6 @@
     - with [Velopert](https://velopert.com/3480)
 - Library & Frameworks
     - ReactJS
-        - create-react-app
 - Development Environment
     - Visual Studio Code
 ### v2.0.0
@@ -26,5 +25,5 @@
 - Upgrade Todo-List App
 - Library & Frameworks
     - ReactJS
-        - react-router-dom
+    - react-router-dom
     - Redux
