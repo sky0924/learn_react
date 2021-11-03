@@ -1,0 +1,50 @@
+
+.detail {
+  background: white;
+  width: 512px;
+  min-height: 40rem;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.16); /* 그림자 */ 
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detail-back {
+  position: fixed;
+  margin: 0.9rem 1.3rem;
+  font-size: 1.85rem;
+  color: white;
+}
+
+.detail-title {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  background: #2e5583;;
+  color: white;
+}
+
+.detail-content {
+  margin: 1rem;
+}
+
+.detail-textarea {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.detail-textarea textarea {
+  font-family: 'EliceDigitalBaeum_Regular';
+  min-width: 450px;
+  min-height: 32.15rem;
+  margin: 0 auto;
+  padding: 10px;
+  resize: none;
+  border: none;
+  outline: none;
+  border: 0.01rem solid #eeeeee;
+  border-radius: 5px;
+}

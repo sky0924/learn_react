@@ -11,16 +11,27 @@
   cursor: pointer;
 }
 
-.color:hover {
-  opacity: 0.75;
-}
-
-.color.active, .color:active {
+.color:hover, .plus:hover, .color.active, .color:active {
   opacity: 1;
 }
 
 .color + .color {
   margin-left: 2rem;
+}
+
+.plus {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 2rem;
+  opacity: 0.5;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 0.1rem solid gray;
+  border-style: dashed;
+  color: gray;
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
 }
 
 /* .back {

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Palette.css';
+import { HiOutlinePlus } from 'react-icons/hi';
 
 const Color = ({ color, active, onClick }) => {
   return (
@@ -21,6 +22,9 @@ const Palette = ({ colors, selected, onSelect }) => {
   return (
     <div className="palette">
       { colorList }
+      <div className="plus" onClick="">
+        <HiOutlinePlus />
+      </div>
       {/* <div className="back">
         <img src="back.png" alt="back" />
       </div> */}
