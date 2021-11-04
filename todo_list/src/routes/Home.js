@@ -8,7 +8,7 @@ const colors = ['#000000','#1d3557', '#6b705c', '#ff6b6b'];
 
 class App extends Component {
 
-  // 🤔? id에 초기값을 넣어주는 걸까?
+  // 🤔? id의 초기값을 왜 설정해주는 걸까?
   id = 7
 
   state = {
@@ -28,19 +28,29 @@ class App extends Component {
     color: ''
   }
 
+  // 😯! input 태그에 입력된 값을 state의 input으로 넘긴다.
   handleChange = (e) => {
     this.setState({
-      // input 태그에 입력된 값을 state의 input으로 넘긴다.
       input: e.target.value
     });
   }
 
+  /*
+  😯!
+    input: '' 
+    -> input을 비운다.(초기화)
+
+    그러면 빈 값인 상태로 배열에 추가되지 않을까? 
+    -> 배열에 추가되는 객체에는 text: input으로 state에서 값을 불러와 넣어주고,
+      비워지는 input은 실제로 사용자들이 입력하는 input 태그를 말한다.
+    
+    todos.concat(...) 
+    -> 기존의 배열에 새로운 객체를 추가한 새로운 배열을 반환한다.
+  */
   handleCreate = () => {
     const { input, todos, color } = this.state;
     this.setState({
-      // input을 비운다. 🤔? 빈 값이 배열에 추가되는 건 아닐까?
       input: '',
-      // 기존의 todos 배열에 값을 추가하여 새로운 배열을 반환한다.
       todos: todos.concat({
         id: this.id++,
         text: input,
@@ -50,14 +60,14 @@ class App extends Component {
     });
   }
 
+  // 😯! Enter 키를 눌러도 Create 버튼을 누른 것과 같이 동작한다.
   handleKeyPress = (e) => {
     if(e.key === 'Enter') {
-      // Enter 키를 눌러도 Create 버튼을 누른 것과 같이 동작한다.
       this.handleCreate();
     }
   }
 
-  // 🤔? 잘 모르겠다.
+  // 🤔? 어지럽다.
   handleToggle = (id) => {
     const { todos } = this.state;
     const index = todos.findIndex(todo => todo.id === id);

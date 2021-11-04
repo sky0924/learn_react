@@ -3,8 +3,7 @@ import TodoItem from './TodoItem';
 
 class TodoItemList extends Component {
 
-  // 🤔? 뭘까
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     return this.props.todos !== nextProps.todos;
   }
 
