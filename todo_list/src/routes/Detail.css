@@ -39,7 +39,7 @@
 .detail-textarea textarea {
   font-family: 'EliceDigitalBaeum_Regular';
   min-width: 450px;
-  min-height: 32.15rem;
+  min-height: 29rem;
   margin: 0 auto;
   padding: 10px;
   resize: none;
@@ -47,4 +47,27 @@
   outline: none;
   border: 0.01rem solid #eeeeee;
   border-radius: 5px;
+}
+
+.detail-buttons {
+  margin: 0.8rem;
+  text-align: right;
+}
+
+.detail-buttons button {
+  width: 3.5rem;
+  height: 2rem;
+  margin-left: 1rem;
+  border: 1px solid #758eac;
+  border-radius: 0.5rem;
+  background: #758eac;
+  color: white;
+  font-size: 0.9rem;
+  font-family: 'EliceDigitalBaeum_Regular';
+}
+
+.detail-buttons button:hover {
+  cursor: pointer;
+  background: #a3b2c9;
+  border-color: #a3b2c9;
 }

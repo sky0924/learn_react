@@ -26,7 +26,54 @@
   color: white;
 }
 
+.user-sub-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* .user-sub-title button {
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+} */
+
 .user-content {
   min-height: 10rem;
   margin: 1rem;
+}
+
+.user-profile, .user-setting {
+  padding: 1rem;
+}
+
+.user-item {
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.user-buttons {
+  position: fixed;
+  top: 7.5rem;
+  right: calc((100% - 512px)/2 + 1rem);
+  display: inline;
+}
+
+button {
+  /* min-width: 3rem; */
+  min-height: 1.5rem;
+  margin-left: 1rem;
+  /* line-height: 1rem; */
+  border: 1px solid #758eac;
+  border-radius: 0.5rem;
+  background: #758eac;
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'EliceDigitalBaeum_Regular';
+}
+
+button:hover {
+  cursor: pointer;
+  background: #a3b2c9;
+  border-color: #a3b2c9;
 }
