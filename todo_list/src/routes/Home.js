@@ -20,7 +20,8 @@ class App extends Component {
       { id: 3, text: '할 일 4. color 추가 및 삭제 기능 구현하기', checked: false },
       { id: 4, text: '할 일 5. user id 및 password 입력 form 만들기', checked: false },
       { id: 5, 
-        text: '할 일 6. 두 줄이 넘어가면 어떻게 되는지 테스트할 아주 길다랗고 길다란 문장, 크게 나쁘진 않은데 check-mark가 toggle 전환될 때마다 items의 width가 변화함', 
+        text: `할 일 6. 두 줄이 넘어가면 어떻게 되는지 테스트할 아주 길다랗고 길다란 문장, 
+          크게 나쁘진 않은데 check-mark가 toggle 전환될 때마다 items의 width가 변화함`, 
         checked: true },
       { id: 6, text: '할 일 7. GitHub Page 만들기', checked: true }
     ],
