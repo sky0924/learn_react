@@ -9,7 +9,7 @@ const colors = ['#000000','#1d3557', '#6b705c', '#ff6b6b'];
 class App extends Component {
 
   // 🤔? id의 초기값을 왜 설정해주는 걸까?
-  id = 7
+  // id = 7
 
   state = {
     input: '',
@@ -52,7 +52,7 @@ class App extends Component {
     this.setState({
       input: '',
       todos: todos.concat({
-        id: this.id++,
+        id: todos.length,
         text: input,
         checked: false,
         color
@@ -78,6 +78,7 @@ class App extends Component {
       ...selected,
       checked: !selected.checked
     };
+    
 
     this.setState({
       todos: nextTodos

@@ -13,8 +13,19 @@
 .detail-back {
   position: fixed;
   margin: 0.9rem 1.3rem;
+
+  background: none;
+  border: none;
   font-size: 1.85rem;
   color: white;
+}
+
+.detail-back:hover {
+  background: none;
+}
+
+.detail-back svg:hover {
+  cursor: pointer;
 }
 
 .detail-title {
