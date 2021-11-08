@@ -11,8 +11,8 @@
 }
 
 .detail-back {
-  position: fixed;
-  margin: 0.9rem 1.3rem;
+  position: absolute;
+  margin: 1rem 1.3rem;
 
   background: none;
   border: none;

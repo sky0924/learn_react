@@ -11,7 +11,7 @@
 }
 
 .user-info {
-  position: fixed;
+  position: absolute;
   margin: 0 auto;
   margin-top: 1rem;
   /* text-align: right; */

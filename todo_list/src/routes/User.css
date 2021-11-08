@@ -11,8 +11,8 @@
 }
 
 .user-back {
-  position: fixed;
-  margin: 0.9rem 1.3rem;
+  position: absolute;
+  margin: 2.8rem 1.3rem;
   font-size: 1.85rem;
   color: white;
   background: none;
@@ -59,7 +59,7 @@
 }
 
 .user-buttons {
-  position: fixed;
+  position: absolute;
   top: 7.5rem;
   right: calc((100% - 512px)/2 + 1rem);
   display: inline;

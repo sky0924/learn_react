@@ -7,10 +7,15 @@ class User extends Component {
   constructor(props) {
     super(props);
     this.goHome = this.goHome.bind(this);
+    this.goLogin = this.goLogin.bind(this);
   }
 
   goHome() {
     this.props.history.push('/');
+  }
+
+  goLogin() {
+    this.props.history.push('/login');
   }
 
   render() {
@@ -24,7 +29,7 @@ class User extends Component {
           나의 정보
 
           <div className="user-buttons">
-            <button>로그아웃</button>
+            <button onClick={ this.goLogin }>로그아웃</button>
           </div>
         </div>
 

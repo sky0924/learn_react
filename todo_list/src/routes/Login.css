@@ -1,0 +1,93 @@
+
+.login {
+  background: white;
+  width: 512px;
+  min-height: 20rem;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.16); /* 그림자 */ 
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.login-content {
+  min-height: 10rem;
+  margin: 2rem 1rem;
+}
+
+.login-item {
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  /* border-bottom: 1px solid #f1f3f5; */
+}
+
+.login-title {
+  padding: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  background: #2e5583;;
+  color: white;
+}
+
+.login-sub-title {
+  font-size: 1.1rem;
+  font-weight: 300;
+  display: inline;
+}
+
+input {
+  margin-left: 2rem;
+  /* flex: 1; */
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #758eac;
+}
+
+.mg_l_2 {
+  margin-left: 2rem;
+}
+
+.mg_l_1 {
+  margin-left: 1rem;
+}
+
+.login-buttons {
+  position: absolute;
+  top: 22.5rem;
+  right: calc((100% - 512px)/2 + 1.5rem);
+  display: inline;
+}
+
+button {
+  min-width: 3rem;
+  min-height: 2rem;
+  margin-left: 1rem;
+  /* line-height: 1rem; */
+  border: 1px solid #758eac;
+  border-radius: 0.5rem;
+  background: #758eac;
+  color: white;
+  font-size: 1rem;
+  font-family: 'EliceDigitalBaeum_Regular';
+}
+
+button:hover {
+  cursor: pointer;
+  background: #a3b2c9;
+  border-color: #a3b2c9;
+}
+
+.login-back {
+  position: absolute;
+  margin: 2.8rem 1.3rem;
+  font-size: 1.85rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.login-back:hover {
+  background: none;
+}
