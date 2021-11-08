@@ -2,7 +2,7 @@
 .login {
   background: white;
   width: 512px;
-  min-height: 20rem;
+  min-height: 22rem;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.16); /* 그림자 */ 
   margin: 0 auto;
   margin-top: 4rem;
@@ -18,7 +18,17 @@
 .login-item {
   margin: 1rem 0 0 0;
   padding: 1rem;
-  /* border-bottom: 1px solid #f1f3f5; */
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.login-item input {
+  width: 19rem;
+  margin-left: 1.5rem;
+  /* flex: 1; */
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #758eac;
 }
 
 .login-title {
@@ -36,44 +46,34 @@
   display: inline;
 }
 
-input {
-  margin-left: 2rem;
-  /* flex: 1; */
-  font-size: 1.25rem;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #758eac;
-}
-
 .mg_l_2 {
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
 
 .mg_l_1 {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
-.login-buttons {
+.login-button {
   position: absolute;
-  top: 22.5rem;
+  top: 23.2rem;
   right: calc((100% - 512px)/2 + 1.5rem);
   display: inline;
 }
 
-button {
-  min-width: 3rem;
-  min-height: 2rem;
-  margin-left: 1rem;
+.login-button button {
+  /* min-width: 2rem; */
+  min-height: 1.7rem;
   /* line-height: 1rem; */
   border: 1px solid #758eac;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   background: #758eac;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: 'EliceDigitalBaeum_Regular';
 }
 
-button:hover {
+.login-button button:hover {
   cursor: pointer;
   background: #a3b2c9;
   border-color: #a3b2c9;

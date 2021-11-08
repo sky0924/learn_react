@@ -6,18 +6,18 @@ class Login extends Component {
 
   constructor(props) {
     super(props);
-    this.goHome = this.goHome.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
 
-  goHome() {
-    this.props.history.push('/');
+  goBack() {
+    this.props.history.push('/user');
   }
 
   render() {
 
     return (
       <main className="login">
-        <button className="login-back" onClick={ this.goHome }>
+        <button className="login-back" onClick={ this.goBack }>
           <IoArrowBackCircle />
         </button>
         
@@ -27,15 +27,15 @@ class Login extends Component {
         <section className="login-content">
           <div className="login-item">
             <div className="login-sub-title mg_l_2">아이디</div>
-            <input size="25" />
+            <input placeholder="아이디를 입력해주세요." />
           </div>
           <div className="login-item">
             <div className="login-sub-title mg_l_1">비밀번호</div>
-            <input size="25" />
+            <input placeholder="비밀번호를 입력해주세요." />
           </div>
 
-          <div className="login-buttons">
-            <button onClick={ this.goHome }>확인</button>
+          <div className="login-button">
+            <button onClick={ this.goBack }>확인</button>
           </div>
         </section>
       </main>

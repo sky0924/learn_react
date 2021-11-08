@@ -22,7 +22,7 @@ const Palette = ({ colors, selected, onSelect }) => {
   return (
     <div className="palette">
       { colorList }
-      <div className="plus" onClick="">
+      <div className="plus">
         <HiOutlinePlus />
       </div>
       {/* <div className="back">

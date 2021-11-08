@@ -8,6 +8,11 @@ class User extends Component {
     super(props);
     this.goHome = this.goHome.bind(this);
     this.goLogin = this.goLogin.bind(this);
+    this.goProfile = this.goProfile.bind(this);
+  }
+  
+  state = {
+    switch: 0
   }
 
   goHome() {
@@ -16,6 +21,28 @@ class User extends Component {
 
   goLogin() {
     this.props.history.push('/login');
+  }
+
+  goProfile() {
+    this.props.history.push('/profile');
+  }
+
+  toggleTheme() {
+    const toggleText = document.getElementById('toggle-text');
+    // let toggle = this.getState();
+    // let toggle = 0;
+    // if (toggle === 0) {
+      toggleText.textContent = '🌙 Dark';
+      console.log(`ToggleText is Changed: ${toggleText.textContent} Mode`)
+    //   this.setState({
+    //     switch: 1
+    //   });
+    // } else if (toggle === 1) {
+    //   toggleText.textContent = '☀️ Light';
+    //   this.setState({
+    //     switch: 0
+    //   });
+    // }
   }
 
   render() {
@@ -38,12 +65,24 @@ class User extends Component {
           <div className="user-profile">
             <div className="user-sub-title">
               프로필
-              <button>변경</button>
+              <button onClick={ this.goProfile }>변경</button>
             </div>
-            <div className="user-item">사진</div>
-            <div className="user-item">이름</div>
-            <div className="user-item">이메일</div>
-            <div className="user-item">설명</div>
+            <div className="user-item">
+              <div className="user-label mg-l-1">사진</div>
+              <div className="user-input">image</div>
+            </div>
+            <div className="user-item">
+              <div className="user-label mg-l-1">이름</div>
+              <div className="user-input">name</div>
+            </div>
+            <div className="user-item">
+              <div className="user-label">이메일</div>
+              <div className="user-input">email</div>
+            </div>
+            <div className="user-item">
+              <div className="user-label mg-l-1">소개</div>
+              <div className="user-input">intro</div>
+            </div>
           </div>
 
           <div className="user-setting">
@@ -51,10 +90,24 @@ class User extends Component {
               설정
             </div>
             <div className="user-item">
-              언어
+              <div className="user-label mg-l-1">언어</div>
+              <div className="user-input">
+                <select name="language">
+                  <option value="">language</option>
+                  <option value="kor">Korean</option>
+                  <option value="eng">English</option>
+                </select>
+              </div>
             </div>
             <div className="user-item">
-              테마
+              <div className="user-label mg-l-1">테마</div>
+              <div className="user-input">
+                <span id="toggle-text">☀️ Light</span>
+                <label className="toggle">
+                  <input id="toggle-check" type="checkbox" onClick={ this.toggleTheme } />
+                  <span className="slider round" />
+                </label>
+              </div>
             </div>
           </div>
         </section>

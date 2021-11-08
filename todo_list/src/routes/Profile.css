@@ -1,0 +1,122 @@
+
+.profile {
+  background: white;
+  width: 512px;
+  min-height: 34rem;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.16); /* 그림자 */ 
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.profile-back {
+  position: absolute;
+  margin: 2.8rem 1.3rem;
+  font-size: 1.85rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.profile-back:hover {
+  background: none;
+}
+
+.profile-title {
+  padding: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  background: #2e5583;;
+  color: white;
+}
+
+.profile-sub-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* .profile-sub-title button {
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+} */
+
+.profile-content {
+  min-height: 10rem;
+  margin: 1rem;
+}
+
+.profile-profile, .profile-setting {
+  padding: 1rem;
+}
+
+.profile-item {
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f3f5;
+  margin-left: 1.2rem;
+}
+
+.profile-item input {
+  width: 20rem;
+  margin-left: 2rem;
+  /* flex: 1; */
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #758eac;
+}
+
+.profile-button {
+  position: absolute;
+  top: 35.2rem;
+  right: calc((100% - 512px)/2 + 1.5rem);
+  display: inline;
+}
+
+.profile-button button {
+  /* min-width: 2rem; */
+  min-height: 1.7rem;
+  /* line-height: 1rem; */
+  border: 1px solid #758eac;
+  border-radius: 0.4rem;
+  background: #758eac;
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'EliceDigitalBaeum_Regular';
+}
+
+.profile-button button:hover {
+  cursor: pointer;
+  background: #a3b2c9;
+  border-color: #a3b2c9;
+}
+
+.profile-label {
+  display: inline;
+}
+
+.input-file-button {
+  margin-left: 2rem;
+  padding: 0.2rem 0.5rem;
+  background: #758eac;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+.input-file-button:hover {
+  cursor: pointer;
+  background: #a3b2c9;
+  border-color: #a3b2c9;
+}
+
+.input_img {
+  width: 20.3rem;
+}
+
+.mg-l-1 {
+  margin-left: 0.9rem;
+}

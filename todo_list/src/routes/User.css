@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.user-back {
+.user .user-back {
   position: absolute;
   margin: 2.8rem 1.3rem;
   font-size: 1.85rem;
@@ -19,7 +19,7 @@
   border: none;
 }
 
-.user-back:hover {
+.user .user-back:hover {
   background: none;
 }
 
@@ -58,6 +58,16 @@
   border-bottom: 1px solid #f1f3f5;
 }
 
+.user-label {
+  float: left;
+}
+
+.user-input {
+  display: inline;
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+}
+
 .user-buttons {
   position: absolute;
   top: 7.5rem;
@@ -65,21 +75,83 @@
   display: inline;
 }
 
-button {
+.user button {
   /* min-width: 3rem; */
   min-height: 1.5rem;
   margin-left: 1rem;
   /* line-height: 1rem; */
   border: 1px solid #758eac;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   background: #758eac;
   color: white;
   font-size: 0.8rem;
   font-family: 'EliceDigitalBaeum_Regular';
 }
 
-button:hover {
+.user button:hover {
   cursor: pointer;
   background: #a3b2c9;
   border-color: #a3b2c9;
+}
+
+
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 1.7rem;
+  margin-left: 1rem;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a3b2c9;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  left: 6px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background-color: #758eac;
+}
+
+/* input:focus + .slider {
+  box-shadow: 0 0 0.1rem #2196F3;
+} */
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.6rem);
+  -ms-transform: translateX(1.6rem);
+  transform: translateX(1.6rem);
+}
+
+.slider.round {
+  border-radius: 2rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
