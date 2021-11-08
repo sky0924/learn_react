@@ -15,6 +15,8 @@ class Detail extends Component {
   }
 
   render() {
+    const { todos } = this.props;
+    const id = this.props.match.params.id
 
     return (
       <main className="detail">
@@ -22,13 +24,13 @@ class Detail extends Component {
           <IoArrowBackCircle />
         </button>
         <div className="detail-title">
-          {/* { text } */}
-          할 일 1. Redux 이해 및 적용하기
+        {todos[id].text}
         </div>
         <section className="detail-content">
           <div className="detail-textarea">
-            <textarea placeholder="내용을 입력하세요." 
-            defaultValue="Redux란? &#13;- Redux는 오픈 소스 자바스크립트 라이브러리이다. &#13;- state를 이용한 웹 사이트 혹은 애플리케이션의 상태 관리를 목적으로 사용한다." />
+            <textarea placeholder="내용을 입력하세요." />
+          
+          
           </div>
           <div className="detail-buttons">
             <button onClick={ this.goHome }>취소</button>

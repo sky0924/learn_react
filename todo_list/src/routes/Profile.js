@@ -62,7 +62,7 @@ class Profile extends Component {
             </div>
             <div className="profile-item">
               <div className="profile-label mg-l-1">소개</div>
-              <input placeholder="자신을 간략하게 소개해보세요." />
+              <input placeholder="자신을 간략하게 소개해주세요." />
             </div>
 
             <div className="profile-button">

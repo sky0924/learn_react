@@ -69,19 +69,27 @@ class User extends Component {
             </div>
             <div className="user-item">
               <div className="user-label mg-l-1">사진</div>
-              <div className="user-input">image</div>
+              <div className="user-input">
+                <img src={ require("../cloud.png").default } alt="img" />
+              </div>
             </div>
             <div className="user-item">
               <div className="user-label mg-l-1">이름</div>
-              <div className="user-input">name</div>
+              <div className="user-input">김하늘</div>
             </div>
             <div className="user-item">
               <div className="user-label">이메일</div>
-              <div className="user-input">email</div>
+              <div className="user-input">sky@sngy.io</div>
             </div>
             <div className="user-item">
               <div className="user-label mg-l-1">소개</div>
-              <div className="user-input">intro</div>
+              <div className="user-input">
+                주식회사 시너지 플랫폼 개발팀 / 인턴 김하늘
+                <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="https://www.sngy.io">https://www.sngy.io</a>
+                <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="https://github.com/sky0924">https://github.com/sky0924</a>
+              </div>
             </div>
           </div>
 

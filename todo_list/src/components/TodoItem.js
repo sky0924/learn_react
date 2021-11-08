@@ -45,7 +45,7 @@ class TodoItem extends Component {
           checked && (<div className="check-mark">&#x2713;</div>)
         }
 
-        <Link className="more" to="./detail">
+        <Link className="more" to={`/detail/${id}`}>
           <RiMoreFill />
         </Link>
       </div>

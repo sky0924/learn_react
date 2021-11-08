@@ -68,6 +68,10 @@
   font-size: 1.1rem;
 }
 
+.user-input img {
+  width: 3rem;
+}
+
 .user-buttons {
   position: absolute;
   top: 7.5rem;
