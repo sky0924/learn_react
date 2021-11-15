@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function CreateUser({ username, email, onChange, onCreate }) {
   return (
@@ -6,16 +6,16 @@ function CreateUser({ username, email, onChange, onCreate }) {
       <input
         name="username"
         placeholder="이름을 입력하세요."
-        onChange={ onChange }
-        value={ username }
+        onChange={onChange}
+        value={username}
       />
       <input
         name="email"
         placeholder="이메일을 입력하세요."
-        onChange={ onChange }
-        value={ email }
+        onChange={onChange}
+        value={email}
       />
-      <button onClick={ onCreate }>등록</button>
+      <button onClick={onCreate}>등록</button>
     </div>
   );
 }

@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import './TodoItem.css';
-import { RiMoreFill } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import "./TodoItem.css";
+import { RiMoreFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 class TodoItem extends Component {
-
   /* 
   😯!
     shouldComponentUpdate
@@ -31,19 +30,22 @@ class TodoItem extends Component {
     const { text, checked, id, color, onToggle, onRemove } = this.props;
 
     return (
-      <div className="todo-item" onClick={ () => onToggle(id) }>
-        <div className="remove" onClick={ (e) => {
-          e.stopPropagation();
-          onRemove(id)
-        } }>&times;</div>
-
-        <div style={ { color } } className={ `todo-text ${ checked && 'checked' }` }>
-          <div>{ text }</div>
+      <div className="todo-item" onClick={() => onToggle(id)}>
+        <div
+          className="remove"
+          onClick={(e) => {
+            e.stopPropagation();
+            onRemove(id);
+          }}
+        >
+          &times;
         </div>
 
-        {
-          checked && (<div className="check-mark">&#x2713;</div>)
-        }
+        <div style={{ color }} className={`todo-text ${checked && "checked"}`}>
+          <div>{text}</div>
+        </div>
+
+        {checked && <div className="check-mark">&#x2713;</div>}
 
         <Link className="more" to={`/detail/${id}`}>
           <RiMoreFill />

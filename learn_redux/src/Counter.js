@@ -1,35 +1,29 @@
-import React, { useReducer } from 'react';
+import React, { Component } from "react";
 
-function reducer(state, action) {
-  switch (action.type) {
-    case 'PLUS':
-      return state + 1;
-    case 'MINUS':
-      return state - 1;
-    default:
-      return state;
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.handlePlus = this.handlePlus.bind(this);
+    this.handlePlus = this.handlePlus.bind(this);
   }
-}
 
-function Counter() {
-  // 배열 비구조화 할당
-  const [number, dispatch] = useReducer(reducer, 0);
+  handlePlus() {
+    console.log("plus");
+  }
 
-  const onPlus = () => {
-    dispatch({ type: 'PLUS' });
-  };
+  handleMinus() {
+    console.log("minus");
+  }
 
-  const onMinus = () => {
-    dispatch({ type: 'MINUS' });
-  };
-
-  return (
-    <div>
-      <h1>{ number }</h1>
-      <button onClick={ onPlus }>plus +</button>
-      <button onClick={ onMinus }>minus -</button>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <h1>0</h1>
+        <button onClick={this.handlePlus}>+1</button>
+        <button onClick={this.handleMinus}>-1</button>
+      </div>
+    );
+  }
 }
 
 export default Counter;

@@ -1,10 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
 function InputSample() {
-
   const [inputs, setInputs] = useState({
-    name: '',
-    nickname: ''
+    name: "",
+    nickname: "",
   });
 
   const nameInput = useRef();
@@ -15,37 +14,40 @@ function InputSample() {
     const { name, value } = e.target;
     setInputs({
       ...inputs,
-      [name]: value
+      [name]: value,
     });
   };
 
   const onReset = () => {
     setInputs({
-      name: '',
-      nickname: '',
+      name: "",
+      nickname: "",
     });
     console.log(nameInput);
     nameInput.current.focus();
   };
 
-
   return (
     <div>
-      <input 
-        name="name" 
-        placeholder="이름" 
-        onChange={ onChange } 
-        value={ name }
-        ref={ nameInput } />
-      <input 
-        name="nickname" 
+      <input
+        name="name"
+        placeholder="이름"
+        onChange={onChange}
+        value={name}
+        ref={nameInput}
+      />
+      <input
+        name="nickname"
         placeholder="닉네임"
-        onChange={ onChange } 
-        value={ nickname } />
+        onChange={onChange}
+        value={nickname}
+      />
 
-      <button onClick={ onReset }>초기화</button>
+      <button onClick={onReset}>초기화</button>
       <div>
-        <h3>값: { name } ({ nickname }) </h3>
+        <h3>
+          값: {name} ({nickname}){" "}
+        </h3>
       </div>
     </div>
   );
