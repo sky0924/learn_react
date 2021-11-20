@@ -1,55 +1,36 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "LOADING":
-      return {};
-    case "SUCCESS":
-      return {};
-    default:
-      throw new Error(`Unhandled action type: ${action.type}`);
-  }
-}
+import React, { useState } from "react";
+import { useUsersState, useUsersDispatch, getUsers } from "./UsersContext";
+import User from "./User";
 
 function Users() {
-  const [users, setUsers] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [userId, setUserId] = useState(null);
+  const state = useUsersState();
+  const dispatch = useUsersDispatch();
 
-  const fetchUsers = async () => {
-    try {
-      setError(null);
-      setUsers(null);
-      setLoading(true);
-      const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-      setUsers(response.data);
-    } catch (e) {
-      setError(e);
-    }
-    setLoading(false);
+  const { data: users, loading, error } = state.users;
+  const fetchData = () => {
+    getUsers(dispatch);
   };
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  if (loading) return <h1> &nbsp; Loading... </h1>;
-  if (error) return <h1> &nbsp; Error! </h1>;
-  if (!users) return null;
+  if (loading) return <div>로딩중..</div>;
+  if (error) return <div>에러가 발생했습니다</div>;
+  if (!users) return <button onClick={fetchData}>불러오기</button>;
 
   return (
     <>
       <ul>
         {users.map((user) => (
-          <li key={user.id}>
+          <li
+            key={user.id}
+            onClick={() => setUserId(user.id)}
+            style={{ cursor: "pointer" }}
+          >
             {user.username} ({user.name})
           </li>
         ))}
       </ul>
-      <button onClick={fetchUsers}>새로고침</button>
+      <button onClick={fetchData}>다시 불러오기</button>
+      {userId && <User id={userId} />}
     </>
   );
 }
