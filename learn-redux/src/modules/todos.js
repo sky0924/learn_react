@@ -20,7 +20,7 @@ export const toggleTodo = (id) => ({
 const initialState = [
   {
     id: 1,
-    text: "초기값",
+    text: "",
     done: false,
   },
 ];
